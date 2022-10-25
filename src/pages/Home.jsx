@@ -1,7 +1,12 @@
 import React from "react";
+import FetchData from "../components/FetchData";
 
 function Home() {
-  return <div className="pages">Home</div>;
+  return (
+    <div>
+      <FetchData />
+    </div>
+  );
 }
 
 export default Home;

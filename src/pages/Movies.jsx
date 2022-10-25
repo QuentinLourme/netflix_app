@@ -1,7 +1,7 @@
 import React from "react";
 
 function Movies() {
-  return <div className="pages">Movies</div>;
+  return <div>Movies</div>;
 }
 
 export default Movies;

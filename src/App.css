@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
+/* Global */
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  background-color: #333;
 }
 
 .pages {
@@ -17,6 +19,7 @@ body {
   font-size: 40px;
 }
 
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -34,6 +37,7 @@ body {
   font-weight: 500;
   letter-spacing: 1px;
   font-size: 34px;
+  text-decoration: none;
 }
 
 .links {
@@ -75,6 +79,66 @@ body {
   z-index: -1;
 }
 
+/* Search Bar */
+form {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0 10px 0;
+  position: relative;
+}
+
+input {
+  width: 30%;
+  font-family: inherit;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  outline: 0;
+  font-size: 1.2rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+}
+
+button {
+  background-color: #333;
+  border: 1px solid #fff;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.8rem 1.2rem;
+  text-align: center;
+  text-decoration: none #333 solid;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid #fff;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Movie Display */
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  margin: 5px;
+  justify-content: flex-start;
+}
+
+.movie-image {
+  display: block;
+}
+
+/* Media Queries */
 @media only screen and (max-width: 981px) {
   .navbar {
     padding: 25px 3%;

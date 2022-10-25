@@ -1,7 +1,7 @@
 import React from "react";
 
 function Shows() {
-  return <div className="pages">Shows</div>;
+  return <div>Shows</div>;
 }
 
 export default Shows;

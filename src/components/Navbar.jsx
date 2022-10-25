@@ -9,7 +9,11 @@ function Navbar() {
   }
   return (
     <div className="navbar">
-      <div className="logo">Logo</div>
+      <div>
+        <Link className="logo" to="/">
+          FakeFlix
+        </Link>
+      </div>
       <div className={show ? "links active" : "links"}>
         <Link onClick={() => showSwitch()} to="/">
           Accueil

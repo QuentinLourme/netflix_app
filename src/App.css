@@ -19,6 +19,10 @@ body {
   font-size: 40px;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 /* Navbar */
 .navbar {
   display: flex;
@@ -89,6 +93,7 @@ form {
 
 input {
   width: 30%;
+  margin-right: 5px;
   font-family: inherit;
   border: 0;
   border-bottom: 2px solid #fff;
@@ -102,7 +107,7 @@ input {
 button {
   background-color: #333;
   border: 1px solid #fff;
-  border-radius: 1.5rem;
+  border-radius: 1.2rem;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
@@ -110,7 +115,7 @@ button {
   font-size: 1.1rem;
   font-weight: 600;
   line-height: 1;
-  padding: 0.8rem 1.2rem;
+  padding: 10px;
   text-align: center;
   text-decoration: none #333 solid;
   transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
@@ -129,13 +134,71 @@ button:hover {
   justify-content: center;
 }
 
+/* .movie-image:focus ~ .movie-image, */
+.movie-image:hover ~ .movie-image {
+  transform: translateX(25%);
+}
+
+/* .movie-container .movie-image:focus, */
+.movie-container .movie-image:hover {
+  transform: scale(1.5);
+  z-index: 1;
+}
+
 .card {
+  display: flex;
+  position: relative;
   margin: 5px;
   justify-content: flex-start;
 }
 
+.movie-info {
+  display: none;
+}
+
+.movie-info.active {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-direction: column;
+  overflow: scroll;
+  justify-content: flex-start;
+  background-color: lightgray;
+  z-index: 1;
+  min-height: 300px;
+  min-width: 200px;
+  transition: transform 500ms;
+}
+
+/* .movie-info.active:focus ~ .movie-info.active, */
+.movie-info.active:hover ~ .movie-info.active {
+  transform: translateX(25%);
+}
+
+/* .movie-container .movie-info.active:focus, */
+.movie-container .movie-info.active:hover {
+  transform: scale(1.5);
+  z-index: 1;
+}
+
 .movie-image {
-  display: block;
+  transition: transform 500ms;
+}
+
+.movie-title {
+  margin: 0 0 5px 0;
+}
+
+.description {
+  margin: 0 0 5px 0;
+}
+
+.note {
+  margin: 0;
+}
+
+.release-date {
+  margin: 0;
 }
 
 /* Media Queries */

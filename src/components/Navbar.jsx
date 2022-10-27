@@ -16,13 +16,10 @@ function Navbar() {
       </div>
       <div className={show ? "links active" : "links"}>
         <Link onClick={() => showSwitch()} to="/">
-          Accueil
+          Films
         </Link>
         <Link onClick={() => showSwitch()} to="/shows">
           Séries
-        </Link>
-        <Link onClick={() => showSwitch()} to="/movies">
-          Films
         </Link>
         <Link onClick={() => showSwitch()} to="/mylist">
           Ma liste

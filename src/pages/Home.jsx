@@ -4,7 +4,7 @@ import FetchData from "../components/FetchData";
 function Home() {
   return (
     <div>
-      <FetchData />
+      <FetchData comp="movie" />
     </div>
   );
 }
